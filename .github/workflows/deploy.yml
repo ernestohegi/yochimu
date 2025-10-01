@@ -50,7 +50,7 @@ jobs:
     needs: build-and-push
     steps:
       - name: Trigger deployment workflow
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.DEPLOYMENT_KEY }}
           repository: ${{ secrets.DEPLOYMENT_REPO }}
