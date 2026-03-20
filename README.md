@@ -59,6 +59,25 @@ Yochimu is built with modern web technologies:
 
 Yochimu integrates with the [Tatoeba API](https://en.wiki.tatoeba.org/articles/show/api) to fetch authentic Japanese sentences with English translations. Tatoeba is a large database of example sentences translated into many languages.
 
+## 🧪 Mocking with MSW
+
+Yochimu includes [Mock Service Worker (MSW)](https://mswjs.io/) for deterministic local development and test-ready request mocking.
+
+- In development, the browser worker starts automatically and can mock:
+   - `POST /api/translate`
+   - `GET https://tatoeba.org/eng/api_v0/search`
+- Shared handlers live in `src/mocks/handlers.ts`.
+- Browser setup lives in `src/mocks/browser.ts`.
+- Node/test setup lives in `src/mocks/server.ts`.
+
+The worker script is stored at `public/mockServiceWorker.js` and configured through `msw.workerDirectory` in `package.json`.
+
+To refresh the worker file after upgrading MSW:
+
+```bash
+pnpm dlx msw init public --save
+```
+
 ## 🚀 Getting Started
 
 ### Prerequisites
