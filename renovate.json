@@ -5,10 +5,14 @@
   "requiredStatusChecks": ["ci"],
   "prHourlyLimit": 2,
   "prConcurrentLimit": 5,
+  "timezone": "Europe/London",
+  "schedule": ["after 1am and before 2am every day"],
+  "updateNotScheduled": false,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "all minor and patch updates"
+      "groupName": "all minor and patch updates",
+      "groupSlug": "minor-patch-updates"
     }
   ]
 }
