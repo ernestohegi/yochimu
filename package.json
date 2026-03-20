@@ -26,7 +26,13 @@
     "@types/react-dom": "^19",
     "eslint": "^10.0.0",
     "eslint-config-next": "16.2.0",
+    "msw": "2.12.13",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
