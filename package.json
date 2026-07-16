@@ -28,7 +28,7 @@
     "eslint-config-next": "16.2.10",
     "msw": "2.15.0",
     "tailwindcss": "^4",
-    "typescript": "^6.0.0"
+    "typescript": "^7.0.0"
   },
   "msw": {
     "workerDirectory": [
